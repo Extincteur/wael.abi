@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio Waël ABI | BTS SIO SISR</title>
+<meta name="description" content="E-portfolio BTS SIO option SISR : dossier de réalisations professionnelles pour l'épreuve E5.">
+<style>
+:root{--bg:#f2f4f8;--card:#fff;--ink:#14213d;--mute:#5b6679;--line:#d9dfe9;--acc:#2f6fed;--sig:#c4620f;--term:#101a2e;--termink:#cfe0ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1626;--card:#16213a;--ink:#e8eefc;--mute:#9aa8c4;--line:#27345a;--acc:#6b9bff;--sig:#f0a050;--term:#08101f}}
+:root[data-theme="dark"]{--bg:#0e1626;--card:#16213a;--ink:#e8eefc;--mute:#9aa8c4;--line:#27345a;--acc:#6b9bff;--sig:#f0a050;--term:#08101f}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,sans-serif}
+a{color:var(--acc)}
+.mono{font-family:ui-monospace,Consolas,Menlo,monospace}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;gap:18px;padding:12px 5vw;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav b{margin-right:auto;font-size:18px}
+nav a{color:var(--mute);text-decoration:none;font-size:14px}nav a:hover,nav a:focus-visible{color:var(--acc)}
+nav button{background:none;border:1px solid var(--line);border-radius:6px;color:var(--ink);cursor:pointer;padding:3px 9px}
+section{padding:72px 5vw;max-width:1100px;margin:auto}
+h1{font-size:clamp(40px,8vw,84px);line-height:1;margin:6px 0 16px;letter-spacing:-.03em}
+h2{font-size:clamp(26px,4vw,38px);margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--mute);margin:0 0 32px;max-width:62ch}
+.hero{display:grid;gap:36px;grid-template-columns:1.1fr 1fr;align-items:center;min-height:80vh}
+@media(max-width:800px){.hero{grid-template-columns:1fr}}
+.term{background:var(--term);color:var(--termink);border-radius:10px;padding:0 0 18px;font-size:14px;box-shadow:0 12px 40px rgba(10,20,50,.25)}
+.term .bar{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid #ffffff1a;margin-bottom:14px}
+.term .bar i{width:11px;height:11px;border-radius:50%;background:#ffffff33}
+.term p{margin:4px 18px;min-height:1.6em}.term .p{color:#7fb0ff}.term .o{color:#ffd29a}
+.cur{display:inline-block;width:8px;height:1em;background:var(--termink);vertical-align:-2px;animation:b 1s steps(1) infinite}@keyframes b{50%{opacity:0}}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;padding:10px 20px;border-radius:8px;border:1px solid var(--acc);color:var(--acc);text-decoration:none;font-weight:600}
+.btn.f{background:var(--acc);color:#fff}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.card h3{margin:2px 0 8px;font-size:18px}.card small{color:var(--mute)}
+.tl{border-left:2px solid var(--line);padding-left:20px;display:grid;gap:22px}
+.tl div{position:relative}.tl div:before{content:"";position:absolute;left:-27px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--acc)}
+.tl span{color:var(--sig);font-weight:600;font-size:14px}.tl p{margin:2px 0 0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:20px;padding:6px 14px;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+.tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:12px;background:color-mix(in srgb,var(--acc) 14%,transparent);color:var(--acc);margin:6px 6px 0 0}
+details{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}summary{cursor:pointer;color:var(--acc);font-weight:600}
+details ul{padding-left:18px;color:var(--mute);margin:8px 0 0}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:center}th:first-child,td:first-child{text-align:left}
+th{background:color-mix(in srgb,var(--acc) 10%,transparent)}td.y{color:var(--sig);font-weight:700}td.n{color:var(--line)}tfoot td{font-weight:700}
+.bloc{display:grid;grid-template-columns:44px 1fr;gap:14px}.bloc .n{font-size:30px;font-weight:700;color:var(--acc);line-height:1}
+footer{text-align:center;color:var(--mute);padding:30px 5vw 50px;border-top:1px solid var(--line);font-size:14px}
+:focus-visible{outline:2px solid var(--sig);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.cur{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav>
+<b>Waël.A</b>
+<a href="#profil">Profil</a><a href="#realisations">Réalisations</a><a href="#blocs">Compétences</a><a href="#synthese">Synthèse</a><a href="#veille">Veille</a><a href="#contact">Contact</a>
+<button id="theme" aria-label="Changer de thème">◐</button>
+</nav>
+
+<section id="accueil" class="hero">
+<div>
+<p class="sub" style="margin:0">Bonjour, je m'appelle</p>
+<h1>Waël ABI.</h1>
+<p style="font-size:20px;max-width:30ch">Étudiant en BTS SIO option SISR. Réseaux, systèmes et cybersécurité.</p>
+<div class="btns"><a class="btn f" href="#realisations">Voir mes réalisations</a><a class="btn" href="#contact">Me contacter</a></div>
+</div>
+<div class="term mono" aria-label="Terminal de présentation">
+<div class="bar"><i></i><i></i><i></i></div>
+<p><span class="p">wabi@bts-sio:~$</span> whoami</p>
+<p class="o" id="l1"></p>
+<p><span class="p">wabi@bts-sio:~$</span> cat specialites.txt</p>
+<p class="o" id="l2"></p>
+<p><span class="p">wabi@bts-sio:~$</span> <span class="cur"></span></p>
+</div>
+</section>
+
+<section id="profil">
+<h2>Parcours et formation</h2>
+<p class="sub">Mon parcours scolaire et professionnel, de la formation aux stages.</p>
+<div class="tl">
+<div><span>2025 – 2027</span><p><b>BTS SIO option SISR</b><br>Solutions d'infrastructure, systèmes et réseaux. [Nom de l'établissement, ville]</p></div>
+<div><span>[Période] · Stage 1ère année</span><p><b>[Nom de l'organisation]</b><br>Administration système, support utilisateurs, sécurisation du réseau. [À adapter]</p></div>
+<div><span>[Année]</span><p><b>Avant le BTS</b><br>[Bac, projets personnels, premières expériences en informatique.]</p></div>
+</div>
+<div class="btns"><a class="btn f" href="#" onclick="return false">Télécharger mon CV (PDF)</a></div>
+</section>
+
+<section id="realisations">
+<h2>Réalisations professionnelles</h2>
+<p class="sub">Dossier numérique de l'épreuve E5. Chaque réalisation indique les blocs de compétences mobilisés.</p>
+<div class="filters" id="filters"></div>
+<div class="grid" id="projects"></div>
+</section>
+
+<section id="blocs">
+<h2>Compétences par blocs</h2>
+<p class="sub">Référentiel BTS SIO SISR, bloc « Support et mise à disposition de services informatiques ».</p>
+<div class="grid" id="blocgrid"></div>
+</section>
+
+<section id="synthese">
+<h2>Tableau de synthèse</h2>
+<p class="sub">Pièce obligatoire du dossier E5 : blocs de compétences mobilisés par réalisation. Le tableau se met à jour avec vos réalisations.</p>
+<div class="tw"><table id="synth"></table></div>
+</section>
+
+<section id="veille">
+<h2>Veille technologique</h2>
+<p class="sub">Mes sources et mes sujets de veille, preuve du bloc 6.</p>
+<div class="grid">
+<div class="card"><h3>Cybersécurité</h3><p>Suivi des alertes et bonnes pratiques de durcissement. [Décrivez votre méthode]</p><span class="tag">ANSSI</span><span class="tag">CERT-FR</span><span class="tag">LinkedIn</span></div>
+<div class="card"><h3>Infrastructure et cloud</h3><p>Évolutions de Windows Server, Linux, virtualisation et réseau.</p><span class="tag">Proxmox</span><span class="tag">Windows Server</span><span class="tag">Linux</span></div>
+<div class="card"><h3>Automatisation</h3><p>Apprentissage du scripting pour automatiser l'administration.</p><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">PowerShell</span></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Me contacter</h2>
+<p class="sub">Pour une opportunité de stage, d'alternance ou une question.</p>
+<div class="btns"><a class="btn f" href="mailto:wael.abi@limayrac.fr">Envoyer un message</a><a class="btn" href="https://www.linkedin.com/in/waël-abi">LinkedIn</a></div>
+</section>
+<footer>© 2026 Waël ABI · Portfolio BTS SIO SISR</footer>
+
+<script>
+// ====== À MODIFIER : vos réalisations ======
+const PROJETS=[
+{t:"Supervision réseau avec PRTG",o:"Stage",b:[1,4,5],d:"Installation de PRTG, capteurs Ping sur les équipements, seuils d'alerte et notification par mail en cas de coupure.",tags:["PRTG","SMTP"],det:["Contexte et besoin","Étapes de réalisation","Captures d'écran","Tests et résultats"]},
+{t:"Dépannage de la téléphonie",o:"Stage",b:[2],d:"Diagnostic d'une panne touchant les postes fixes : identification de la cause, correction et suivi du ticket.",tags:["Diagnostic","Support"],det:["Symptômes","Démarche de diagnostic","Solution","Retour utilisateur"]},
+{t:"Déploiement de postes sous Active Directory",o:"Stage",b:[1,5],d:"Configuration de postes : passage en édition Pro, intégration au domaine, nommage normalisé, script PowerShell de nettoyage.",tags:["Active Directory","PowerShell"],det:["Cahier des charges","Procédure","Script","Remise au client"]},
+{t:"Gestionnaire de mots de passe (VM de test)",o:"Stage",b:[1,5],d:"Déploiement de Vaultwarden avec Docker Compose, reverse proxy Traefik et HTTPS, collections par service.",tags:["Docker","Traefik","Linux"],det:["Architecture","Installation","Sécurisation","Tests"]},
+{t:"Sauvegarde de la messagerie Microsoft 365",o:"Stage",b:[1,5],d:"Mise en place d'une sauvegarde nocturne sur NAS Synology avec rapport quotidien par e-mail.",tags:["Synology","M365","Sauvegarde"],det:["Existant","Migration","Planification","Restauration testée"]},
+{t:"Site web vitrine d'une association",o:"Formation",b:[3,4,5],d:"Conception d'un site multi-pages mis en ligne sur un hébergement réel, avec planification du projet.",tags:["HTML","CSS","SEO"],det:["Maquettes","Planning (Gantt)","Mise en ligne","Bilan"]},
+{t:"Conception de cet e-portfolio",o:"Projet perso",b:[6],d:"Cahier des charges, choix techniques et itérations pour produire ce dossier numérique.",tags:["HTML/CSS/JS","Portfolio"],det:["Objectifs","Choix techniques","Évolutions"]}
+];
+const BLOCS=[
+["Gérer le patrimoine informatique","Recenser les ressources, gérer les habilitations, vérifier la continuité de service, organiser les sauvegardes.",["Inventaire","Sauvegardes","Habilitations"]],
+["Répondre aux incidents et aux demandes d'assistance","Collecter, suivre et traiter les demandes des utilisateurs sur les services réseau, système et applicatifs.",["Support N1/N2","Ticketing","GLPI"]],
+["Développer la présence en ligne","Valoriser l'organisation sur les médias numériques, référencer ses services et mesurer leur visibilité.",["SEO","Web","Communication"]],
+["Travailler en mode projet","Analyser les objectifs, planifier les activités, suivre les indicateurs et analyser les écarts.",["Planification","Gantt","Suivi"]],
+["Mettre à disposition un service informatique","Tester, déployer un service et accompagner les utilisateurs dans sa mise en place.",["Déploiement","Tests","Formation"]],
+["Organiser son développement professionnel","Mettre en place sa veille, gérer son identité professionnelle et construire son projet.",["Veille","LinkedIn","Portfolio"]]
+];
+// ===========================================
+const $=s=>document.querySelector(s);
+const F=$("#filters");let cur=0;
+["Toutes",...BLOCS.map((_,i)=>"Bloc "+(i+1))].forEach((l,i)=>{const b=document.createElement("button");b.textContent=l;b.setAttribute("aria-pressed",i==0);b.onclick=()=>{cur=i;[...F.children].forEach((c,j)=>c.setAttribute("aria-pressed",j==i));draw()};F.append(b)});
+function draw(){$("#projects").innerHTML=PROJETS.filter(p=>!cur||p.b.includes(cur)).map(p=>`<article class="card"><small>${p.o}</small><h3>${p.t}</h3><p>${p.d}</p>${p.b.map(n=>`<span class="tag">Bloc ${n}</span>`).join("")}${p.tags.map(t=>`<span class="tag" style="background:none;border:1px solid var(--line);color:var(--mute)">${t}</span>`).join("")}<details><summary>Voir le détail</summary><ul>${p.det.map(x=>`<li>${x}</li>`).join("")}</ul></details></article>`).join("")}
+draw();
+$("#blocgrid").innerHTML=BLOCS.map((b,i)=>`<div class="card bloc"><div class="n">${i+1}</div><div><h3 style="margin:0 0 6px">${b[0]}</h3><p style="margin:0 0 4px;color:var(--mute)">${b[1]}</p>${b[2].map(t=>`<span class="tag">${t}</span>`).join("")}</div></div>`).join("");
+const tot=[0,0,0,0,0,0];
+$("#synth").innerHTML=`<thead><tr><th>Réalisation</th><th>Origine</th>${[1,2,3,4,5,6].map(n=>`<th>B${n}</th>`).join("")}</tr></thead><tbody>${PROJETS.map(p=>`<tr><td>${p.t}</td><td>${p.o}</td>${[1,2,3,4,5,6].map(n=>{const y=p.b.includes(n);if(y)tot[n-1]++;return y?'<td class="y">✓</td>':'<td class="n">—</td>'}).join("")}</tr>`).join("")}</tbody><tfoot><tr><td>Couverture</td><td></td>${tot.map(t=>`<td>${t}</td>`).join("")}</tr></tfoot>`;
+// Terminal
+function type(el,txt,done){let i=0;(function s(){el.textContent="> "+txt.slice(0,i++);if(i<=txt.length)setTimeout(s,35);else done&&done()})()}
+if(matchMedia("(prefers-reduced-motion:reduce)").matches){$("#l1").textContent="> Futur administrateur systèmes et réseaux";$("#l2").textContent="> Cybersécurité, Réseaux, Linux, Windows"}
+else type($("#l1"),"Futur administrateur systèmes et réseaux",()=>type($("#l2"),"Cybersécurité, Réseaux, Linux, Windows"));
+// Thème
+$("#theme").onclick=()=>{const r=document.documentElement,d=r.dataset.theme==="dark"||(!r.dataset.theme&&matchMedia("(prefers-color-scheme:dark)").matches);r.dataset.theme=d?"light":"dark"};
+</script>
+</body>
+</html>
