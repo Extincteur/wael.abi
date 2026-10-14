@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio Waël ABI | BTS SIO SISR</title>
+<meta name="description" content="E-portfolio BTS SIO option SISR : dossier de réalisations professionnelles pour l'épreuve E5.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+<b>Waël ABI</b>
+<a href="#profil">Profil</a><a href="#realisations">Réalisations</a><a href="#blocs">Compétences</a><a href="#synthese">Synthèse</a><a href="#veille">Veille</a><a href="#contact">Contact</a>
+<button id="theme" aria-label="Changer de thème">◐</button>
+</nav>
+
+<section id="accueil" class="hero">
+<div>
+<p class="sub" style="margin:0">Bonjour, je m'appelle</p>
+<h1>Waël ABI</h1>
+<p style="font-size:20px;max-width:30ch">Étudiant en BTS SIO option SISR. Réseaux, systèmes et cybersécurité.</p>
+<div class="btns"><a class="btn f" href="#realisations">Voir mes réalisations</a><a class="btn" href="#contact">Me contacter</a></div>
+</div>
+<div class="term mono" aria-label="Terminal de présentation">
+<div class="bar"><i></i><i></i><i></i><span>wabi@bts-sio: ~</span></div>
+<div id="tbody"></div>
+</div>
+</section>
+<dialog id="dlg" aria-label="Détail de la réalisation"></dialog>
+
+<section id="profil">
+<h2>Parcours et formation</h2>
+<p class="sub">Mon parcours scolaire et professionnel, de la formation aux stages.</p>
+<div class="tl">
+<div><span>2026 – 2028</span><p><b>BTS SIO option SISR</b><br>Solutions d'infrastructure, systèmes et réseaux. <br>Institut Limayrac, Toulouse</p></div>
+<div><span>2026 - 2027</span><p><b>Stage 1ère année</b><br>Administration système, support utilisateurs, sécurisation du réseau. [À adapter]</p></div>
+<div><span>2024 - 2026</span><p><b>Bac STI2D option SIN</b><br>Premières expériences en informatique et dans le monde Industrielle<br> Lycée Jean Baylet, Valance D'Agen</p></div>
+</div><br>
+<a class="btn" href="cv-wael-abi.pdf" target="_blank" rel="noopener">Ouvrir mon CV dans un nouvel onglet</a>
+</section>
+
+<section id="realisations">
+<h2>Réalisations professionnelles</h2>
+<p class="sub">Dossier numérique de l'épreuve E5. Chaque réalisation indique les blocs de compétences mobilisés.</p>
+<div class="filters" id="filters"></div>
+<div class="grid" id="projects"></div>
+</section>
+
+<section id="blocs">
+<h2>Compétences par blocs</h2>
+<p class="sub">Référentiel BTS SIO SISR, bloc « Support et mise à disposition de services informatiques ».</p>
+<div class="grid" id="blocgrid"></div>
+</section>
+
+<section id="synthese">
+<h2>Tableau de synthèse</h2>
+<p class="sub">Pièce obligatoire du dossier E5 : blocs de compétences mobilisés par réalisation. Le tableau se met à jour avec vos réalisations.</p>
+<div class="tw"><table id="synth"></table></div>
+</section>
+
+<section id="veille">
+<h2>Veille technologique</h2>
+<p class="sub">Mes sources et mes sujets de veille, preuve du bloc 6.</p>
+<div class="grid">
+<div class="card"><h3>Cybersécurité</h3><p>Suivi des alertes et bonnes pratiques de durcissement. [Décrivez votre méthode]</p><span class="tag">ANSSI</span><span class="tag">CERT-FR</span><span class="tag">LinkedIn</span></div>
+<div class="card"><h3>Infrastructure et cloud</h3><p>Évolutions de Windows Server, Linux, virtualisation et réseau.</p><span class="tag">Proxmox</span><span class="tag">Windows Server</span><span class="tag">Linux</span></div>
+<div class="card"><h3>Automatisation</h3><p>Apprentissage du scripting pour automatiser l'administration.</p><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">PowerShell</span></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Me contacter</h2>
+<p class="sub">Pour une opportunité de stage, d'alternance ou une question.</p>
+<div class="grid" style="margin-bottom:20px"><div class="card"><small>E-mail</small><h3 style="font-size:16px"><a href="mailto:wael.abi@limayrac.fr">wael.abi@limayrac.fr</a></h3></div><div class="card"><small>Secteur</small><h3 style="font-size:16px">Toulouse / Moissac</h3></div></div>
+<div class="btns"><a class="btn f" href="mailto:wael.abi@limayrac.fr">Envoyer un message</a><a class="btn" href="https://www.linkedin.com/in/waël-abi" target="_blank" rel="noopener">LinkedIn</a></div>
+</section>
+<footer>© 2026 Waël ABI · Portfolio BTS SIO SISR</footer>
+
+<script>
+// ====== À MODIFIER : vos réalisations ======
+const PROJETS=[
+{t:"Supervision réseau avec PRTG",o:"Stage",b:[1,4,5],d:"Installation de PRTG, capteurs Ping sur les équipements, seuils d'alerte et notification par mail en cas de coupure.",tags:["PRTG","SMTP"],
+ctx:"L'organisation souhaitait être prévenue immédiatement quand un équipement important (caméras, serveurs) tombe en panne. [Décrivez votre contexte]",
+steps:["Installer PRTG Network Monitor sur le serveur","Cartographier les équipements à surveiller","Créer les capteurs Ping et régler les seuils d'alerte","Configurer l'envoi de mails SMTP en cas de coupure","Simuler une panne pour valider les alertes"],
+res:"Les coupures sont détectées en quelques secondes et un mail est envoyé automatiquement au service informatique.",
+imgs:["Tableau de bord PRTG","Carte des équipements","Configuration des alertes SMTP"]},
+{t:"Dépannage de la téléphonie",o:"Stage",b:[2],d:"Diagnostic d'une panne touchant les postes fixes : identification de la cause, correction et suivi du ticket.",tags:["Diagnostic","Support"],
+ctx:"Plusieurs postes fixes d'un service n'émettaient plus d'appels. [Décrivez le contexte]",
+steps:["Recueillir les symptômes auprès des utilisateurs","Isoler la cause (équipement réseau, boîtier, ligne)","Appliquer la correction","Vérifier avec les utilisateurs et clôturer le ticket"],
+res:"Le service de téléphonie est rétabli et la cause est documentée pour éviter une récidive.",
+imgs:["Ticket d'incident","Schéma de l'installation"]},
+{t:"Déploiement de postes sous Active Directory",o:"Stage",b:[1,5],d:"Configuration de postes : passage en édition Pro, intégration au domaine, nommage normalisé, script PowerShell de nettoyage.",tags:["Active Directory","PowerShell"],
+ctx:"Un lot de tablettes devait être préparé et remis à des utilisateurs. [Précisez le nombre et le délai]",
+steps:["Passer Windows en édition Professionnelle","Nommer chaque poste selon la règle de nommage","Joindre le domaine Active Directory","Lancer les mises à jour et installer les outils","Exécuter le script PowerShell de désinstallation des applications inutiles","Remettre les postes et accompagner les utilisateurs"],
+res:"Tous les postes sont conformes, intégrés au domaine et remis aux utilisateurs dans les délais.",
+imgs:["Jonction au domaine","Script PowerShell","Poste prêt à remettre"]},
+{t:"Gestionnaire de mots de passe (VM de test)",o:"Stage",b:[1,5],d:"Déploiement de Vaultwarden avec Docker Compose, reverse proxy Traefik et HTTPS, collections par service.",tags:["Docker","Traefik","Linux"],
+ctx:"Tester un coffre-fort de mots de passe avant un passage en production. [Décrivez le besoin]",
+steps:["Créer une VM Ubuntu Server","Installer Docker et Docker Compose","Déployer Vaultwarden et Traefik","Obtenir un certificat HTTPS (Let's Encrypt)","Créer les collections par service et configurer le SMTP"],
+res:"Un environnement de test fonctionnel, validé par les testeurs avant la mise en production.",
+imgs:["Fichier docker-compose.yml","Interface Vaultwarden","Certificat HTTPS valide"]},
+{t:"Sauvegarde de la messagerie Microsoft 365",o:"Stage",b:[1,5],d:"Mise en place d'une sauvegarde nocturne sur NAS Synology avec rapport quotidien par e-mail.",tags:["Synology","M365","Sauvegarde"],
+ctx:"Remplacer une solution de sauvegarde existante par une solution intégrée au NAS. [Précisez]",
+steps:["Remettre le NAS en état (IP fixe, mise à jour DSM)","Installer Active Backup for Microsoft 365","Connecter le tenant et choisir les boîtes à sauvegarder","Planifier la sauvegarde nocturne et le rapport par mail","Tester une restauration"],
+res:"Les messageries sont sauvegardées chaque nuit et un rapport quotidien confirme le bon déroulement.",
+imgs:["Console Synology","Planification des tâches","Rapport quotidien"]},
+{t:"Site web vitrine d'une association",o:"Formation",b:[3,4,5],d:"Conception d'un site multi-pages mis en ligne sur un hébergement réel, avec planification du projet.",tags:["HTML","CSS","SEO"],
+ctx:"Créer un site présentant une structure et ses activités. [Précisez le client et les contraintes]",
+steps:["Recueillir le besoin et rédiger le cahier des charges","Réaliser les maquettes","Planifier le projet (diagramme de Gantt)","Développer les pages en HTML/CSS","Mettre en ligne et vérifier le référencement"],
+res:"Le site est en ligne, adapté aux mobiles, et le projet a été suivi avec des indicateurs d'avancement.",
+imgs:["Maquette de la page d'accueil","Diagramme de Gantt","Site en ligne"]},
+{t:"Conception de cet e-portfolio",o:"Projet perso",b:[6],d:"Cahier des charges, choix techniques et itérations pour produire ce dossier numérique.",tags:["HTML/CSS/JS","Portfolio"],
+ctx:"Produire un dossier numérique clair, support de l'épreuve E5.",
+steps:["Définir les sections imposées par le référentiel","Choisir les technologies","Concevoir le design et le contenu","Itérer à partir des retours"],
+res:"Un portfolio en ligne, facile à mettre à jour, qui regroupe toutes mes réalisations.",
+imgs:["Page d'accueil du portfolio"]},
+{t:"Veille informatique",o:"Personnel",b:[6],d:"Suivi régulier de l'actualité en cybersécurité, réseaux et systèmes à partir de sources fiables.",tags:["ANSSI","CERT-FR","LinkedIn"],
+ctx:"[Pourquoi tu fais cette veille]",
+steps:["Définir les sujets de veille","Choisir les sources","Organiser la collecte","Trier et résumer"],
+res:"[Ce que la veille t'a apporté]",
+imgs:["Exemple de flux de veille"]}
+];
+const BLOCS=[
+["Gérer le patrimoine informatique","Recenser les ressources, gérer les habilitations, vérifier la continuité de service, organiser les sauvegardes.",["Inventaire","Sauvegardes","Habilitations"]],
+["Répondre aux incidents et aux demandes d'assistance","Collecter, suivre et traiter les demandes des utilisateurs sur les services réseau, système et applicatifs.",["Support N1/N2","Ticketing","GLPI"]],
+["Développer la présence en ligne","Valoriser l'organisation sur les médias numériques, référencer ses services et mesurer leur visibilité.",["SEO","Web","Communication"]],
+["Travailler en mode projet","Analyser les objectifs, planifier les activités, suivre les indicateurs et analyser les écarts.",["Planification","Gantt","Suivi"]],
+["Mettre à disposition un service informatique","Tester, déployer un service et accompagner les utilisateurs dans sa mise en place.",["Déploiement","Tests","Formation"]],
+["Organiser son développement professionnel","Mettre en place sa veille, gérer son identité professionnelle et construire son projet.",["Veille","LinkedIn","Portfolio"]]
+];
+// ===========================================
+const $=s=>document.querySelector(s);
+const F=$("#filters");let cur=0;
+["Toutes",...BLOCS.map((_,i)=>"Bloc "+(i+1))].forEach((l,i)=>{const b=document.createElement("button");b.textContent=l;b.setAttribute("aria-pressed",i==0);b.onclick=()=>{cur=i;[...F.children].forEach((c,j)=>c.setAttribute("aria-pressed",j==i));draw()};F.append(b)});
+function draw(){$("#projects").innerHTML=PROJETS.map((p,i)=>[p,i]).filter(([p])=>!cur||p.b.includes(cur)).map(([p,i])=>`<article class="card pop"><small>${p.o}</small><h3>${p.t}</h3><p>${p.d}</p>${p.b.map(n=>`<span class="tag">Bloc ${n}</span>`).join("")}${p.tags.map(t=>`<span class="tag" style="background:none;border:1px solid var(--line);color:var(--mute)">${t}</span>`).join("")}<br><button class="btn" data-i="${i}">Voir le détail complet</button></article>`).join("")}
+draw();
+const dlg=$("#dlg");
+function ph(c){const v=`<svg xmlns="http://www.w3.org/2000/svg" width="640" height="380" viewBox="0 0 640 380"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b2a4d"/><stop offset="1" stop-color="#2f6fed"/></linearGradient></defs><rect width="640" height="380" fill="url(#g)"/><rect width="640" height="30" fill="#0008"/><circle cx="18" cy="15" r="5" fill="#ff5f56"/><circle cx="36" cy="15" r="5" fill="#ffbd2e"/><circle cx="54" cy="15" r="5" fill="#27c93f"/><text x="320" y="200" fill="#fff" font-family="sans-serif" font-size="22" text-anchor="middle">${c}</text><text x="320" y="230" fill="#ffffffaa" font-family="sans-serif" font-size="14" text-anchor="middle">Capture d'écran à ajouter</text></svg>`;return "data:image/svg+xml,"+encodeURIComponent(v)}
+function openP(i){const p=PROJETS[i];dlg.innerHTML=`<div class="dh"><div><small>${p.o}</small><h3>${p.t}</h3></div><button class="x" aria-label="Fermer">✕</button></div><div class="db"><h4>Contexte</h4><p>${p.ctx}</p><h4>Étapes de réalisation</h4><ol>${p.steps.map(x=>`<li>${x}</li>`).join("")}</ol><h4>Captures d'écran</h4><div class="gal">${p.imgs.map(x=>{x=typeof x=="string"?{cap:x}:x;return `<figure><img src="${x.src||ph(x.cap)}" alt="${x.cap}" loading="lazy"><figcaption>${x.cap}</figcaption></figure>`}).join("")}</div><h4>Résultat</h4><p>${p.res}</p><h4>Compétences mobilisées</h4>${p.b.map(n=>`<span class="tag">Bloc ${n} : ${BLOCS[n-1][0]}</span>`).join("")}</div>`;dlg.showModal();dlg.scrollTop=0}
+$("#projects").onclick=e=>{const b=e.target.closest("[data-i]");if(b)openP(+b.dataset.i)};
+dlg.onclick=e=>{if(e.target===dlg||e.target.closest(".x"))dlg.close();const f=e.target.closest("figure");if(f)f.classList.toggle("big")};
+$("#blocgrid").innerHTML=BLOCS.map((b,i)=>`<div class="card bloc"><div class="n">${i+1}</div><div><h3 style="margin:0 0 6px">${b[0]}</h3><p style="margin:0 0 4px;color:var(--mute)">${b[1]}</p>${b[2].map(t=>`<span class="tag">${t}</span>`).join("")}</div></div>`).join("");
+const tot=[0,0,0,0,0,0];
+$("#synth").innerHTML=`<thead><tr><th>Réalisation</th><th>Origine</th>${[1,2,3,4,5,6].map(n=>`<th>B${n}</th>`).join("")}</tr></thead><tbody>${PROJETS.map(p=>`<tr><td>${p.t}</td><td>${p.o}</td>${[1,2,3,4,5,6].map(n=>{const y=p.b.includes(n);if(y)tot[n-1]++;return y?'<td class="y">✓</td>':'<td class="n">—</td>'}).join("")}</tr>`).join("")}</tbody><tfoot><tr><td>Couverture</td><td></td>${tot.map(t=>`<td>${t}</td>`).join("")}</tr></tfoot>`;
+const RED=matchMedia("(prefers-reduced-motion:reduce)").matches;
+const SCRIPT=[["whoami","Waël ABI, étudiant BTS SIO option SISR"],["cat specialites.txt","Cybersécurité, Réseaux, Linux, Windows"],["ls realisations/","supervision-prtg  deploiement-ad  vaultwarden  sauvegarde-m365"],["uptime","en formation depuis 2025, secteur Toulouse / Moissac"]];
+async function boot(){const tb=$("#tbody"),sl=ms=>new Promise(r=>setTimeout(r,RED?0:ms));
+for(const [c,o] of SCRIPT){const p=document.createElement("p");p.innerHTML='<span class="p">wabi@bts-sio:~$</span> <span class="c"></span>';tb.append(p);const t=p.querySelector(".c");for(const ch of c){t.textContent+=ch;await sl(45)}await sl(250);const q=document.createElement("p");q.className="o";q.textContent=o;tb.append(q);await sl(450)}
+const l=document.createElement("p");l.innerHTML='<span class="p">wabi@bts-sio:~$</span> <span class="cur"></span>';tb.append(l)}
+boot();
+if(!RED&&"IntersectionObserver" in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll("section:not(.hero) .card,.tl>div,.tw").forEach(e=>{if(!e.classList.contains("pop")){e.classList.add("rv");io.observe(e)}})}
+// Thème
+$("#theme").onclick=()=>{const r=document.documentElement,d=r.dataset.theme==="dark"||(!r.dataset.theme&&matchMedia("(prefers-color-scheme:dark)").matches);r.dataset.theme=d?"light":"dark"};
+</script>
+</body>
+</html>
