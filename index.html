@@ -143,7 +143,7 @@ $("#blocgrid").innerHTML=BLOCS.map((b,i)=>`<div class="card bloc"><div class="n"
 const tot=[0,0,0,0,0,0];
 $("#synth").innerHTML=`<thead><tr><th>Réalisation</th><th>Origine</th>${[1,2,3,4,5,6].map(n=>`<th>B${n}</th>`).join("")}</tr></thead><tbody>${PROJETS.map(p=>`<tr><td>${p.t}</td><td>${p.o}</td>${[1,2,3,4,5,6].map(n=>{const y=p.b.includes(n);if(y)tot[n-1]++;return y?'<td class="y">✓</td>':'<td class="n">—</td>'}).join("")}</tr>`).join("")}</tbody><tfoot><tr><td>Couverture</td><td></td>${tot.map(t=>`<td>${t}</td>`).join("")}</tr></tfoot>`;
 const RED=matchMedia("(prefers-reduced-motion:reduce)").matches;
-const SCRIPT=[["whoami","Waël ABI, étudiant BTS SIO option SISR"],["cat specialites.txt","Cybersécurité, Réseaux, Linux, Windows"],["ls realisations/","supervision-prtg  deploiement-ad  vaultwarden  sauvegarde-m365"],["uptime","en formation depuis 2025, secteur Toulouse / Moissac"]];
+const SCRIPT=[["whoami","Waël ABI, étudiant BTS SIO option SISR"],["cat specialites.txt","Cybersécurité, Réseaux, Linux, Windows"],["ls realisations/","supervision-prtg  deploiement-ad  vaultwarden  sauvegarde-m365"],["uptime","en formation depuis 2025"]];
 async function boot(){const tb=$("#tbody"),sl=ms=>new Promise(r=>setTimeout(r,RED?0:ms));
 for(const [c,o] of SCRIPT){const p=document.createElement("p");p.innerHTML='<span class="p">wabi@bts-sio:~$</span> <span class="c"></span>';tb.append(p);const t=p.querySelector(".c");for(const ch of c){t.textContent+=ch;await sl(45)}await sl(250);const q=document.createElement("p");q.className="o";q.textContent=o;tb.append(q);await sl(450)}
 const l=document.createElement("p");l.innerHTML='<span class="p">wabi@bts-sio:~$</span> <span class="cur"></span>';tb.append(l)}
